@@ -1,0 +1,81 @@
+# Catalan translations for bioresilmed_geonode
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Benito Zaragozí <benito.zaragozi@urv.cat>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bioresilmed_geonode\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-15 15:26+0000\n"
+"PO-Revision-Date: 2025-10-15 17:30+0200\n"
+"Last-Translator: Benito Zaragozí <benito.zaragozi@urv.cat>\n"
+"Language-Team: Català\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:6
+msgid "apps explore"
+msgstr "Explora aplicacions"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:13
+msgid "Create New"
+msgstr "Crea’n una de nova"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:13
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:27
+#, python-format
+msgid "%(GEONODE_APPS_NAME)s"
+msgstr "%(GEONODE_APPS_NAME)s"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:20
+#, python-format
+msgid "%(item)s"
+msgstr "%(item)s"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:27
+msgid "Explore"
+msgstr "Explora"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/hero.html:9
+msgid "Living Fields Lab"
+msgstr "Living Fields Lab"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/hero.html:10
+msgid "Explore, share and download geospatial data from the project."
+msgstr "Explora, comparteix i descarrega dades geoespacials del projecte."
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/resource_card.html:48
+msgid "View"
+msgstr "Visualitza"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/resources_grid.html:19
+msgid "Resource found"
+msgstr "Recurs trobat"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/resources_grid.html:21
+msgid "Resources found"
+msgstr "Recursos trobats"
+
+# welcome / empty catalogue
+msgid "Welcome to GeoNode"
+msgstr "Benvinguts a GeoNode"
+
+msgid "This catalog has no public resources."
+msgstr "Aquest catàleg no té recursos públics."
+
+msgid "This catalogue has no public resources."
+msgstr "Aquest catàleg no té recursos públics."
+
+msgid "Please register or sign in to browse the contents."
+msgstr "Si us plau, registra’t o inicia sessió per navegar pels continguts."
+
+# per si el text ve en una sola línia (algunes plantilles l’uneixen)
+msgid "This catalog has no public resources. Please register or sign in to browse the contents."
+msgstr "Aquest catàleg no té recursos públics. Si us plau, registra’t o inicia sessió per navegar pels continguts."
+
+msgid "This catalogue has no public resources. Please register or sign in to browse the contents."
+msgstr "Aquest catàleg no té recursos públics. Si us plau, registra’t o inicia sessió per navegar pels continguts."

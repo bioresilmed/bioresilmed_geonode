@@ -1,0 +1,13 @@
+{% load i18n %}
+{% load base_tags %}
+{% load markdownify %}
+{% load static %}
+
+<div id="gn-hero" class="gn-hero" style="background-image:url('{% static 'img/hero.jpg' %}'); background-size:cover; background-position:center;">
+  <div class="jumbotron">
+    <div class="gn-hero-description">
+      <h1>{% trans "Living Fields Lab" %}</h1>
+      <p>{% trans "Explore, share and download geospatial data from the project." %}</p>
+    </div>
+  </div>
+</div>

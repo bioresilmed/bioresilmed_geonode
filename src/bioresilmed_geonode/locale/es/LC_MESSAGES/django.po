@@ -1,0 +1,88 @@
+# Spanish translations for bioresilmed_geonode
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Benito Zaragozí <benito.zaragozi@urv.cat>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bioresilmed_geonode\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-15 15:26+0000\n"
+"PO-Revision-Date: 2025-10-15 19:30+0200\n"
+"Last-Translator: Benito Zaragozí <benito.zaragozi@urv.cat>\n"
+"Language-Team: Español\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:6
+msgid "apps explore"
+msgstr "Explorar aplicaciones"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:13
+msgid "Create New"
+msgstr "Crear nueva"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:13
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:27
+#, python-format
+msgid "%(GEONODE_APPS_NAME)s"
+msgstr "%(GEONODE_APPS_NAME)s"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:20
+#, python-format
+msgid "%(item)s"
+msgstr "%(item)s"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/legacy/app_list.html:27
+msgid "Explore"
+msgstr "Explorar"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/hero.html:9
+msgid "Living Fields Lab"
+msgstr "Living Fields Lab"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/hero.html:10
+msgid "Explore, share and download geospatial data from the project."
+msgstr "Explora, comparte y descarga datos geoespaciales del proyecto."
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/resource_card.html:48
+msgid "View"
+msgstr "Ver"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/resources_grid.html:19
+msgid "Resource found"
+msgstr "Recurso encontrado"
+
+#: bioresilmed_geonode/templates/geonode-mapstore-client/snippets/resources_grid.html:21
+msgid "Resources found"
+msgstr "Recursos encontrados"
+
+#: templates/geonode-mapstore-client/index.html
+msgid "explore catalogue"
+msgstr "explorar catálogo"
+
+#: bioresilmed_geonode/templates/index.html:XX
+msgid "Sharing experimental field data"
+msgstr "Compartiendo datos de campos experimentales"
+
+#: bioresilmed_geonode/templates/index.html:XX
+msgid "learn more"
+msgstr "más información"
+
+#: bioresilmed_geonode/templates/index.html:XX
+msgid ""
+"A community repository for georeferenced experimental data — plots, "
+"agroecological crops, new treatments and management practices. We publish "
+"maps, datasets and documents with clear metadata so research is easier to "
+"find, reuse and compare. Contribute your trials and help build an open "
+"evidence base for sustainable agriculture."
+msgstr ""
+"Un repositorio comunitario de datos experimentales georreferenciados — "
+"parcelas, cultivos agroecológicos, nuevos tratamientos y prácticas de "
+"manejo. Publicamos mapas, conjuntos de datos y documentos con metadatos "
+"claros para que la investigación sea más fácil de encontrar, reutilizar y "
+"comparar. Sube tus ensayos y ayuda a construir una base de evidencia abierta "
+"para una agricultura sostenible."

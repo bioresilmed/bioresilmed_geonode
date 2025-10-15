@@ -1,0 +1,150 @@
+{% load static %}
+{% load client_version %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html class="msgapi">
+    <head>
+        {% include './geonode-mapstore-client/snippets/head.html' %}
+        {% include './geonode-mapstore-client/snippets/loader_style.html' %}
+
+        {% block custom_theme %}
+            {% include './geonode-mapstore-client/snippets/custom_theme.html' %}
+        {% endblock %}
+
+        {% block extra_style %}
+        <style>
+          /* contenidor compacte */
+          .lf-intro{max-width:980px; margin:8px auto 6px; padding:0;}
+        
+          /* títol clarament més gran — forçat perquè el tema aplana h2 dins .gn-content */
+          .lf-intro__title{
+            margin:0 0 .45rem;
+            font-weight:800;
+            line-height:1.15;
+            font-size: clamp(2.2rem, 2.6vw + 1rem, 3rem) !important; /* ~35–48px */
+            letter-spacing:.2px;
+            color: var(--gn-main-color);
+          }
+        
+          /* cos lleuger i llegible */
+          .lf-intro__lead{
+            margin:0;
+            line-height:1.55;
+            font-size: 1.08rem !important; /* ~17px */
+            color:#2f2f2f;
+          }
+          .lf-intro__link{ font-weight:600; text-decoration:underline; }
+        
+          /* assegura que no aparega cap vora abans del grid */
+          .gn-card-grid{ border-top: 0; }
+        </style>
+        {% endblock %}
+                
+        
+
+        {% block extra_head %}
+        {% endblock %}
+    </head>
+    <body class="msgapi ms2" data-ms2-container="ms2">
+        <div class="gn-page-wrapper {% if request.user_agent.is_mobile %}gn-mobile{% else %}gn-desktop{% endif %}">
+            <div class="gn-theme gn-homepage">
+                {% include './geonode-mapstore-client/_geonode_config.html' %}
+                {% block header %}
+                    {% include './geonode-mapstore-client/snippets/header.html' with show_hero=True %}
+                {% endblock %}
+    
+                {% block content %}
+                    <!-- example of content extension -->
+                    <div class="gn-container">
+                        <div class="gn-content">
+                          <section class="lf-intro" aria-label="{% trans 'site introduction' %}">
+                            <h2 class="lf-intro__title">
+                              {% trans "Sharing experimental field data" %}
+                            </h2>
+                            <p class="lf-intro__lead">
+                              {% blocktrans trimmed %}
+                              A community repository for georeferenced experimental data — plots, agroecological crops,
+                              new treatments and management practices. We publish maps, datasets and documents with clear
+                              metadata so research is easier to find, reuse and compare. Contribute your trials and help
+                              build an open evidence base for sustainable agriculture.
+                              {% endblocktrans %}
+                              <a class="lf-intro__link" href="/about/">{% trans "learn more" %}</a>
+                            </p>
+                          </section>
+                        </div>
+                      </div>
+                      
+                      
+                                    
+
+                    <div class="gn-container">
+                        <div id="gn-home-featured-resources-grid"></div>
+                        <div id="gn-home-resources-grid"></div>
+                    </div>
+                {% endblock %}
+    
+                {% block container %}
+                    <div id="ms-container">
+                        <div class="gn-main-event-container">
+                            <div class="gn-main-event-content">
+                                <div class="gn-main-loader"></div>
+                                <div class="gn-main-event-text"></div>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+
+                <script>
+                    window.addEventListener('mapstore:ready', function(event) {
+                        const catalogPagePath = window.__GEONODE_CONFIG__.localConfig.geoNodeSettings.catalogPagePath;
+                        const pagePath = catalogPagePath ? catalogPagePath : '/catalogue/';
+                        const msAPI = event.detail;
+                        msAPI.setPluginsConfig([
+                            {
+                                name: 'FeaturedResourcesGrid',
+                                cfg: {
+                                    targetSelector: '#gn-home-featured-resources-grid',
+                                    pagePath: pagePath
+                                }
+                            },
+                            {
+                                name: 'ResourcesGrid',
+                                cfg: {
+                                    targetSelector: '#gn-home-resources-grid',
+                                    containerSelector: '#gn-home-resources-grid',
+                                    pagination: false,
+                                    pagePath: pagePath,
+                                    disableFilters: true,
+                                    disableDetailPanel: true,
+                                    enableGeoNodeCardsMenuItems: true
+                                }
+                            },
+                            { name: 'SaveAs', cfg: { closeOnSave: true } },
+                            { name: 'DeleteResource' },
+                            { name: 'DownloadResource' },
+                            { name: 'Notifications' }
+                        ]);
+                    });
+                </script>
+    
+                {% block ms_scripts %}
+                    <script id="gn-script" src="{% static 'mapstore/dist/js/gn-components.js' %}?{% client_version %}"></script>
+                {% endblock %}
+    
+                {% block footer %}
+                    {% include './geonode-mapstore-client/snippets/footer.html' %}
+                {% endblock %}
+    
+                {% block scripts %}
+                    <script src="{% static "lib/js/jquery.min.js" %}"></script>
+                    <script src="{% static "lib/js/bootstrap.min.js" %}"></script>
+                    <script type="text/javascript">
+                        // enable dropdown functionalities
+                        $('.dropdown-toggle').dropdown();
+                    </script>
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

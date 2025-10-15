@@ -1,0 +1,52 @@
+/* Exemple de personalització bàsica per GeoNode / MapStore */
+
+body {
+    background-color: #f6f9f8 !important;
+    font-family: "Open Sans", Arial, sans-serif;
+  }
+  
+  /* Header */
+  .navbar,
+  .gn-header {
+    background-color: #004d40 !important; /* verd fosc */
+    color: #ffffff !important;
+  }
+  
+  /* Footer */
+  footer,
+  .gn-footer {
+    background-color: #263238 !important; /* gris fosc */
+    color: #ffffff;
+    padding: 1rem 0;
+  }
+  
+  /* Títols */
+  h1, h2, h3, h4, h5 {
+    color: #00695c;
+    font-weight: 600;
+  }
+  
+  /* Afegim un banner de prova visible */
+  #bioresilmed-banner {
+    background: #ffd600;
+    color: #000;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Petita ombra a targetes i blocs */
+  .gn-card, .card {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+  }
+  
+  /* Enllaços */
+  a {
+    color: #00796b;
+  }
+  a:hover {
+    color: #004d40;
+  }
+  

@@ -1,0 +1,39 @@
+{% load static %}
+{% load client_lib_tags %}
+{% load client_version %}
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{%block font%}
+    <link href="{% static 'fonts/montserrat.css' %}" rel="stylesheet">
+{%endblock font %}
+
+<link href="{% static 'mapstore/dist/themes/geonode.css' %}?{% client_version %}" rel="stylesheet" />
+<title>{{ SITE_NAME }}</title>
+
+{% block favicon %}
+  <!-- favicon “classic” -->
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}?{% client_version %}">
+
+  <!-- svg modern -->
+  <link rel="icon" href="{% static 'img/logo.svg' %}?{% client_version %}" type="image/svg+xml">
+
+  <!-- apple touch -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}?{% client_version %}">
+
+  <!-- android / pwa (via manifest) -->
+  <link rel="manifest" href="{% static 'site.webmanifest' %}?{% client_version %}">
+
+  <!-- safari pinned tab -->
+  <link rel="mask-icon" href="{% static 'img/logo.svg' %}?{% client_version %}" color="#7CB342">
+
+  <!-- color de tema per a barra del navegador en mòbil -->
+  <meta name="theme-color" content="#7CB342">
+{% endblock %}
+
+
+
+{%block extras%}
+{%endblock extras%}

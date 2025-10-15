@@ -1,0 +1,115 @@
+{# templates/geonode-mapstore-client/snippets/custom_theme.html #}
+<style>
+    /* Bioresilmed theme marker: v1 */
+    .msgapi .gn-theme {
+      /* typography */
+      --gn-font-family-base: 'Montserrat', sans-serif;
+    
+      /* base */
+      --gn-main-bg: #ffffff;
+      --gn-main-color: #1d1d1f;
+      --gn-main-border-color: #e5e5e5;
+    
+      /* brand (based on #7CB342) */
+      --gn-primary: #7CB342;
+      --gn-button-primary-bg: #7CB342;
+      --gn-button-primary-border-color: #7CB342;
+      --gn-button-primary-color: #ffffff;
+      --gn-button-primary-hover-bg: #689F38;
+      --gn-button-primary-active-bg: #558B2F;
+    
+      /* links */
+      --gn-link-color: #689F38;
+      --gn-link-hover-color: #33691E;
+    
+      /* states */
+      --gn-info: #26A69A;
+      --gn-success: #43A047;
+      --gn-warning: #F9A825;
+      --gn-danger: #E53935;
+    
+      /* hero / jumbotron */
+      --gn-jumbotron-bg: #2E7D32;
+      --gn-jumbotron-color: #ffffff;
+    
+      /* footer */
+      --gn-footer-bg: #F7F7F7;
+      --gn-footer-color: #1d1d1f;
+      --gn-footer-link-color: #689F38;
+      --gn-footer-link-hover-color: #33691E;
+    
+      /* focus */
+      --gn-focus-color: rgba(124, 179, 66, 0.35);
+    }
+    
+    /* keep primary button palette; ensure good label contrast */
+    .btn.btn-primary, .gn-btn-primary {
+      color: var(--gn-button-primary-color) !important;
+      background: var(--gn-button-primary-bg) !important;
+      border-color: var(--gn-button-primary-border-color) !important;
+    }
+    .btn.btn-primary:hover, .gn-btn-primary:hover {
+      background: var(--gn-button-primary-hover-bg) !important;
+      border-color: var(--gn-button-primary-hover-bg) !important;
+    }
+    
+    /* navbar: black text only (do not touch global palette) */
+    .gn-menu .gn-menu-list > li > a,
+    .gn-menu .gn-menu-list > li > button,
+    .gn-menu .gn-menu-list > li > .dropdown > a { color: #111 !important; }
+    .gn-menu .gn-menu-list > li > a:hover,
+    .gn-menu .gn-menu-list > li > a:focus,
+    .gn-menu .gn-menu-list > li > button:hover,
+    .gn-menu .gn-menu-list > li > .dropdown > a:hover {
+      color: #000 !important;
+      text-decoration: none;
+      box-shadow: inset 0 -2px 0 0 var(--gn-primary, #7CB342);
+    }
+    
+    /* hero overlay for readability */
+    #gn-hero { position: relative; isolation: isolate; }
+    #gn-hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(46,125,50,0.35) 0%, rgba(46,125,50,0.10) 40%, rgba(0,0,0,0.25) 100%);
+      z-index: 0;
+    }
+    #gn-hero .jumbotron, #gn-hero .gn-hero-description { position: relative; z-index: 1; }
+    #gn-hero h1 { color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
+    #gn-hero p  { color: #f0fdf4; text-shadow: 0 1px 4px rgba(0,0,0,.3); }
+    
+    /* navbar logo sizing */
+    .navbar-brand img.gn-logo { height: 36px; margin-top: -4px; display: block; }
+    @media (max-width: 748px) { .navbar-brand img.gn-logo { height: 30px; } }
+
+    /* tots els tabs amb highlight-menu com a botons verds */
+.gn-menu .btn.btn-primary.highlight-menu{
+  background: var(--gn-button-primary-bg) !important;
+  border-color: var(--gn-button-primary-border-color) !important;
+  color: var(--gn-button-primary-color) !important; /* blanc */
+}
+
+/* estat hover/active del botó */
+.gn-menu .btn.btn-primary.highlight-menu:hover{
+  background: var(--gn-button-primary-hover-bg) !important;
+  border-color: var(--gn-button-primary-hover-bg) !important;
+}
+
+/* PESTANYA ACTIVA: vora inferior i to més fosc per diferenciar-se */
+.gn-menu .btn.btn-primary.highlight-menu.is-active{
+  background: var(--gn-button-primary-active-bg) !important; /* #558B2F */
+  border-color: var(--gn-button-primary-active-bg) !important;
+  box-shadow: inset 0 -3px 0 0 #2E7D32; /* barra inferior més fosca */
+  font-weight: 700;
+}
+
+/* focus accesible (teclat) */
+.gn-menu .btn.btn-primary.highlight-menu:focus{
+  outline: 2px solid var(--gn-focus-color);
+  outline-offset: 2px;
+}
+
+
+    
+    </style>
+    
+    
