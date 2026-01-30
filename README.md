@@ -27,15 +27,6 @@ For all frontend customization and operations, **read the detailed guide here**:
 
 **→ [src/bioresilmed_geonode/README.md](src/bioresilmed_geonode/README.md)**
 
-------------------------------------------------------
-NEXT COMES THE README OF THE geonode-project template...
-------------------------------------------------------
-
-
-# Bioresilmed Geonode
-
-GeoNode template project. Generated django project with GeoNode support.
-
 
 
 ## Table of Contents
